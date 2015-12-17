@@ -1,0 +1,13 @@
+---
+- hosts: local
+  sudo: yes
+
+  pre_tasks:
+    - name: Include default variables.
+      include_vars: vars/main.yml
+
+    # - name: Drupal Settings files.
+    #   include: tasks/settings.php.yml
+  roles:
+    # Install: Drupal Project.
+    - role: taller.drupal-kw

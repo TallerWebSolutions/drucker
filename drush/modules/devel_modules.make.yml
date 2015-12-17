@@ -1,0 +1,16 @@
+core: 7.x
+api: 2
+
+# The Development Toolset
+
+# Specify common subdir of "contrib"
+defaults:
+  projects:
+    subdir: dev
+
+projects:
+  - devel
+  - devel_themer
+  - reroute_email
+  - stage_file_proxy
+  - environment_indicator

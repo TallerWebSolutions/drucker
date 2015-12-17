@@ -1,0 +1,8 @@
+web:
+  build: .
+  environment:
+    - ENV=development
+  ports:
+    - "80:80"
+  volumes:
+    - .:/app

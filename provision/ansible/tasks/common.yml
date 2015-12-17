@@ -1,0 +1,9 @@
+---
+- name: Update apt.
+  command: apt-get update -y
+
+- name: Install apt repositories.
+  command: apt-get install python-apt -y
+
+- name: Include default variables.
+  include_vars: vars/main.yml

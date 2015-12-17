@@ -1,0 +1,21 @@
+---
+- name: drush clear cache
+  command: >
+    /usr/local/bin/drush cc drush
+    chdir={{ drupal_path }}
+  sudo: yes
+  sudo_user: "{{ drupal_www_owner }}"
+
+- name: drupal kraftwagen update
+  command: >
+    /usr/local/bin/drush kw-u
+    chdir={{ drupal_path }}
+  sudo: yes
+  sudo_user: "{{ drupal_www_owner }}"
+
+- name: drupal kraftwagen manifests
+  command: >
+    /usr/local/bin/drush kw-m
+    chdir={{ drupal_path }}
+  sudo: yes
+  sudo_user: "{{ drupal_www_owner }}"

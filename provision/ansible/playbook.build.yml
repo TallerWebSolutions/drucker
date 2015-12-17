@@ -1,0 +1,49 @@
+---
+- hosts: local
+  sudo: yes
+
+  pre_tasks:
+    - name: Include default variables.
+      include_vars: vars/main.yml
+
+    - name: Common tasks.
+      include: tasks/common.yml
+
+    - name: Install dependencies.
+      apt: "pkg={{item}}"
+      with_items:
+        - curl
+        - sendmail
+        - zip
+        - mytop
+        - imagemagick
+        - supervisor
+        - mysql-client
+
+    - name: Ensure Nginx directory exists.
+      file: path=/etc/nginx state=directory
+
+    - name: Custom configuration for Nginx.
+      template: >
+        src=templates/post-config.nginx.j2
+        dest=/etc/nginx/post-config.conf
+
+  roles:
+    # Install: Git. 
+    - role: geerlingguy.git
+
+    # Install: Nginx with extras.
+    - role: jdauphant.nginx
+
+    # Install: Perusio's Nginx configurations.
+    - role: pbuyle.nginx-drupal
+
+    # Install and configure: PHP-FPM with 3 pools.
+    - role: nbz4live.php-fpm
+
+    # Install: PHP Composer.
+    - role: pbuyle.php-composer
+      
+    # Install: Drush.
+    - role: geerlingguy.drush
+

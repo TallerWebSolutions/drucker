@@ -1,0 +1,20 @@
+# Env: Development.
+mysql:
+  image: mysql
+  # @TODO: MySQL isn't working with a volume.
+  # volumes:
+  #   - ./volumes/mysql:/var/lib/mysql:rw
+  environment:
+    - MYSQL_ROOT_PASSWORD=root
+    - MYSQL_USER=drupal
+    - MYSQL_PASSWORD=nonroot
+    - MYSQL_DATABASE=drupal
+
+web:
+  extends:
+    file: common.yml
+    service: web
+  links:
+    - mysql:db
+  environment:
+    - ENV=development
