@@ -32,6 +32,7 @@
       --name={{ drupal_kw_name }}
       --human-name="{{ drupal_kw_human_name }}"
     chdir={{ drupal_project_path }}
+    creates={{ drupal_project_path }}/src
   sudo: yes
   sudo_user: "{{ drupal_www_owner }}"
 
@@ -110,12 +111,15 @@
     state=directory
   ignore_errors: True
 
+# @TODO: Should run only the first time.
 - name: drush clear cache
   command: >
     /usr/local/bin/drush cc drush
     chdir={{ drupal_path }}
   sudo: yes
   sudo_user: "{{ drupal_www_owner }}"
+  when: >
+    drupal_is_booting.rc != 0
 
 - name: drupal kraftwagen update
   command: >
@@ -123,3 +127,5 @@
     chdir={{ drupal_path }}
   sudo: yes
   sudo_user: "{{ drupal_www_owner }}"
+  when: >
+    drupal_is_booting.rc != 0

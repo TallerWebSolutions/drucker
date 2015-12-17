@@ -14,6 +14,8 @@ using Docker as a provider for the containers and protocol to create new states 
 - [Ansible](http://ansible.com).
 
 **Ansible roles:**
+We changed some of the roles, and thats because we aren't pulling from source. :(
+
 - [taller.drupal-kw](https://github.com/TallerWebSolutions/ansible-role-drupal-kw) (not official).
 - [geerlingguy.drush](https://github.com/geerlingguy/ansible-role-drush).
 - [geerlingguy.git](https://github.com/geerlingguy/ansible-role-git).
@@ -36,13 +38,19 @@ Install the [Docker Toolbox](https://www.docker.com/docker-toolbox).
 
 ## Installation
 
-`@TODO: Put more detials about the installation better.`
+`@TODO: Put more details below.`
 
-1. Install the dependencies.
+1. Install requirements.
 2. Clone it to a directory for example: *myproject*
 3. Find for the word: "drucker" and change it to your project's name.
 
 ## Usage for local usage.
+
+**GNU/Linux**
+Keep Docker daemon running.
+
+**Mac OS X** and **Windows**
+Open Kitematic (beta).
 
 `eval "$(docker-machine env default)"`
 Setup your Docker's environment variables.
