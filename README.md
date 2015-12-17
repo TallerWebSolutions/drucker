@@ -7,13 +7,13 @@ Drucker is based on the [Druboot](https://github.com/TallerWebSolutions/druboot)
 [immutable infrastructure](http://michaeldehaan.net/post/118717252307/immutable-infrastructure-is-the-future) concept,
 using Docker as a provider for the containers and protocol to create new states of your infrastructure.
 
-*Provision:*
+**Provision:**
 - [Docker](http://docker.io).
 - [Docker Compose](https://docs.docker.com/compose/).
 - [Docker Machine](https://docs.docker.com/machine/).
 - [Ansible](http://ansible.com).
 
-*Ansible roles:*
+**Ansible roles:**
 - [taller.drupal-kw](https://github.com/TallerWebSolutions/ansible-role-drupal-kw) (not official).
 - [geerlingguy.drush](https://github.com/geerlingguy/ansible-role-drush).
 - [geerlingguy.git](https://github.com/geerlingguy/ansible-role-git).
@@ -22,7 +22,7 @@ using Docker as a provider for the containers and protocol to create new states 
 - [pbuyle.nginx-drupal](https://github.com/perusio/drupal-with-nginx).
 - [pbuyle.php-composer](https://github.com/FloeDesignTechnologies/ansible-php-composer)
 
-*Others:*
+**Others:**
 - [Kraftwagen](http://kraftwagen.org).
 - [Drush](https://github.com/drush-ops/drush).
 
