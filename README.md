@@ -1,6 +1,6 @@
 # Drucker
 [Drupal](http://drupal.org) Stack using [Ansible](http://ansible.com) for provision and
-[Docker](http://docker.io)as a provider with [Kraftwagen](http://kraftwagen.org). **BOOYAH!!**
+[Docker](http://docker.io) as a provider with [Kraftwagen](http://kraftwagen.org). **BOOYAH!!**
 
 ## Motivation
 Drucker is based on the [Druboot](https://github.com/TallerWebSolutions/druboot) adapted to a more
