@@ -36,7 +36,8 @@ Install the [Docker Toolbox](https://www.docker.com/docker-toolbox).
 
 ## Installation
 
-@TODO: Put more detials about the installation better.
+`@TODO: Put more detials about the installation better.`
+
 1. Install the dependencies.
 2. Clone it to a directory for example: *myproject*
 3. Find for the word: "drucker" and change it to your project's name.
