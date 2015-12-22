@@ -1,12 +1,12 @@
 FROM williamyeh/ansible:ubuntu14.04-onbuild
 
-ADD . /app
+ADD ./provision /provision
 
 VOLUME /app
 
 WORKDIR /app
 
-ENV PLAYBOOK  "provision/ansible/playbook.build.yml"
+ENV PLAYBOOK  "/provision/ansible/playbook.build.yml"
 
 RUN ansible-playbook-wrapper
 
