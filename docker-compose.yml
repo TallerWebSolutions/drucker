@@ -3,7 +3,7 @@ mysql:
   image: mysql
   # @TODO: MySQL isn't working with a volume.
   # volumes:
-  #   - ./volumes/mysql:/var/lib/mysql:rw
+    # - ./volumes/mysql:/var/lib/mysql:rw
   environment:
     - MYSQL_ROOT_PASSWORD=root
     - MYSQL_USER=drupal

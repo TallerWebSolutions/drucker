@@ -2,6 +2,8 @@ FROM williamyeh/ansible:ubuntu14.04-onbuild
 
 ADD . /app
 
+VOLUME /app
+
 WORKDIR /app
 
 ENV PLAYBOOK  "provision/ansible/playbook.build.yml"
