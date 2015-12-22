@@ -12,8 +12,11 @@ up:
 down:
 	docker-compose stop
 
+in:
+	docker exec -it `docker ps | grep $(COMPOSE_PROJECT_NAME)_web_1  | awk '{print $$1}'` /bin/bash
+
 restart:
-	docker-compose stop
+	docker-compose restart
 
 clean: clean-containers clean-images
 

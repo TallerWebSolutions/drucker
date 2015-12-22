@@ -35,6 +35,10 @@ Install Docker, Docker compose and Docker machine.
 
 **Mac OS X** and **Windows**
 Install the [Docker Toolbox](https://www.docker.com/docker-toolbox).
+Install the [Docker Machine NFS](https://github.com/adlogix/docker-machine-nfs).
+
+`docker-machine-nfs default`
+Use NFS for sharing folders.
 
 ## Installation
 
